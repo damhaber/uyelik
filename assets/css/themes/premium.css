@@ -1,0 +1,918 @@
+/**
+ * AI Community Engine - Premium Tema
+ * 
+ * Lüks, gösterişli ve modern premium tema
+ * Altın detaylar, cam efekti ve sofistike animasyonlar
+ * 
+ * @package AI_Community
+ * @subpackage Themes
+ * @version 1.0.0
+ */
+
+:root[data-theme="premium"] {
+    /* Ana Renkler - Altın & Lüks */
+    --primary-color: #c5a572;
+    --primary-dark: #b08f5a;
+    --primary-light: #d4b98c;
+    --secondary-color: #2c3e50;
+    --success-color: #27ae60;
+    --danger-color: #c0392b;
+    --warning-color: #f39c12;
+    --info-color: #3498db;
+    
+    /* Arka Plan Renkleri - Derin & Lüks */
+    --bg-primary: #0f0f13;
+    --bg-secondary: #1a1a24;
+    --bg-tertiary: #252530;
+    --bg-card: rgba(37, 37, 48, 0.95);
+    --bg-navbar: rgba(15, 15, 19, 0.95);
+    --bg-sidebar: rgba(26, 26, 36, 0.95);
+    --bg-modal: rgba(37, 37, 48, 0.98);
+    --bg-dropdown: rgba(37, 37, 48, 0.98);
+    
+    /* Metin Renkleri */
+    --text-primary: #ffffff;
+    --text-secondary: #e0e0e0;
+    --text-muted: #9a9a9a;
+    --text-light: #7a7a7a;
+    --text-dark: #2c3e50;
+    --text-white: #ffffff;
+    --text-link: #c5a572;
+    --text-link-hover: #d4b98c;
+    
+    /* Kenarlık Renkleri - Altın Tonları */
+    --border-color: #2c2c3a;
+    --border-light: #3a3a48;
+    --border-dark: #4a4a5a;
+    --border-focus: #c5a572;
+    --border-input: #3a3a48;
+    --border-gold: #c5a572;
+    --border-gold-light: #d4b98c;
+    
+    /* Gölge Efektleri - Lüks Gölgeler */
+    --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 10px 25px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.5);
+    --shadow-xl: 0 30px 60px rgba(0, 0, 0, 0.6);
+    --shadow-focus: 0 0 0 0.2rem rgba(197, 165, 114, 0.4);
+    --shadow-card: 0 8px 20px rgba(0, 0, 0, 0.4);
+    --shadow-dropdown: 0 15px 30px rgba(0, 0, 0, 0.5);
+    --shadow-modal: 0 25px 50px rgba(0, 0, 0, 0.6);
+    --shadow-gold: 0 5px 20px rgba(197, 165, 114, 0.3);
+    --shadow-gold-lg: 0 10px 30px rgba(197, 165, 114, 0.4);
+    
+    /* Buton Renkleri - Premium */
+    --btn-primary-bg: linear-gradient(135deg, #c5a572 0%, #b08f5a 100%);
+    --btn-primary-text: #ffffff;
+    --btn-primary-hover: linear-gradient(135deg, #d4b98c 0%, #c5a572 100%);
+    --btn-primary-active: #b08f5a;
+    
+    --btn-secondary-bg: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    --btn-secondary-text: #ffffff;
+    --btn-secondary-hover: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
+    --btn-secondary-active: #2c3e50;
+    
+    --btn-success-bg: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+    --btn-success-text: #ffffff;
+    --btn-success-hover: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+    --btn-success-active: #27ae60;
+    
+    --btn-danger-bg: linear-gradient(135deg, #c0392b 0%, #e74c3c 100%);
+    --btn-danger-text: #ffffff;
+    --btn-danger-hover: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+    --btn-danger-active: #c0392b;
+    
+    --btn-warning-bg: linear-gradient(135deg, #f39c12 0%, #f1c40f 100%);
+    --btn-warning-text: #2c3e50;
+    --btn-warning-hover: linear-gradient(135deg, #f1c40f 0%, #f39c12 100%);
+    --btn-warning-active: #f39c12;
+    
+    --btn-info-bg: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+    --btn-info-text: #ffffff;
+    --btn-info-hover: linear-gradient(135deg, #2980b9 0%, #3498db 100%);
+    --btn-info-active: #3498db;
+    
+    --btn-light-bg: linear-gradient(135deg, #2c2c3a 0%, #3a3a48 100%);
+    --btn-light-text: #ffffff;
+    --btn-light-hover: linear-gradient(135deg, #3a3a48 0%, #2c2c3a 100%);
+    --btn-light-active: #2c2c3a;
+    
+    --btn-dark-bg: linear-gradient(135deg, #0f0f13 0%, #1a1a24 100%);
+    --btn-dark-text: #ffffff;
+    --btn-dark-hover: linear-gradient(135deg, #1a1a24 0%, #0f0f13 100%);
+    --btn-dark-active: #0f0f13;
+    
+    --btn-gold-bg: linear-gradient(135deg, #c5a572 0%, #d4b98c 100%);
+    --btn-gold-text: #2c3e50;
+    --btn-gold-hover: linear-gradient(135deg, #d4b98c 0%, #c5a572 100%);
+    --btn-gold-active: #c5a572;
+    
+    --btn-link-color: #c5a572;
+    --btn-link-hover: #d4b98c;
+    
+    /* Form Renkleri */
+    --input-bg: #1a1a24;
+    --input-text: #ffffff;
+    --input-border: #3a3a48;
+    --input-focus-border: #c5a572;
+    --input-focus-shadow: 0 0 0 0.2rem rgba(197, 165, 114, 0.25);
+    --input-disabled-bg: #252530;
+    --input-placeholder: #6a6a7a;
+    --input-readonly-bg: #252530;
+    
+    /* Tablo Renkleri */
+    --table-header-bg: #1a1a24;
+    --table-header-text: #c5a572;
+    --table-row-hover: #252530;
+    --table-row-stripe: rgba(197, 165, 114, 0.05);
+    --table-border: #2c2c3a;
+    
+    /* Navbar Renkleri */
+    --navbar-bg: rgba(15, 15, 19, 0.95);
+    --navbar-text: #ffffff;
+    --navbar-link: #e0e0e0;
+    --navbar-link-hover: #c5a572;
+    --navbar-link-active: #c5a572;
+    --navbar-brand: #c5a572;
+    
+    /* Sidebar Renkleri */
+    --sidebar-bg: rgba(26, 26, 36, 0.95);
+    --sidebar-text: #ffffff;
+    --sidebar-link: #e0e0e0;
+    --sidebar-link-hover: #c5a572;
+    --sidebar-link-active: #c5a572;
+    --sidebar-border: #2c2c3a;
+    
+    /* Footer Renkleri */
+    --footer-bg: #0f0f13;
+    --footer-text: #9a9a9a;
+    --footer-link: #c5a572;
+    --footer-link-hover: #d4b98c;
+    --footer-border: #2c2c3a;
+    
+    /* Alert Renkleri - Premium Tonları */
+    --alert-primary-bg: rgba(197, 165, 114, 0.15);
+    --alert-primary-text: #c5a572;
+    --alert-primary-border: rgba(197, 165, 114, 0.3);
+    
+    --alert-secondary-bg: rgba(44, 62, 80, 0.15);
+    --alert-secondary-text: #e0e0e0;
+    --alert-secondary-border: rgba(44, 62, 80, 0.3);
+    
+    --alert-success-bg: rgba(39, 174, 96, 0.15);
+    --alert-success-text: #27ae60;
+    --alert-success-border: rgba(39, 174, 96, 0.3);
+    
+    --alert-danger-bg: rgba(192, 57, 43, 0.15);
+    --alert-danger-text: #c0392b;
+    --alert-danger-border: rgba(192, 57, 43, 0.3);
+    
+    --alert-warning-bg: rgba(243, 156, 18, 0.15);
+    --alert-warning-text: #f39c12;
+    --alert-warning-border: rgba(243, 156, 18, 0.3);
+    
+    --alert-info-bg: rgba(52, 152, 219, 0.15);
+    --alert-info-text: #3498db;
+    --alert-info-border: rgba(52, 152, 219, 0.3);
+    
+    /* Badge Renkleri */
+    --badge-primary-bg: #c5a572;
+    --badge-primary-text: #0f0f13;
+    --badge-secondary-bg: #2c3e50;
+    --badge-secondary-text: #ffffff;
+    --badge-success-bg: #27ae60;
+    --badge-success-text: #ffffff;
+    --badge-danger-bg: #c0392b;
+    --badge-danger-text: #ffffff;
+    --badge-warning-bg: #f39c12;
+    --badge-warning-text: #0f0f13;
+    --badge-info-bg: #3498db;
+    --badge-info-text: #ffffff;
+    --badge-gold-bg: #c5a572;
+    --badge-gold-text: #0f0f13;
+    
+    /* Progress Bar Renkleri */
+    --progress-bg: #2c2c3a;
+    --progress-bar-primary: #c5a572;
+    --progress-bar-success: #27ae60;
+    --progress-bar-danger: #c0392b;
+    --progress-bar-warning: #f39c12;
+    --progress-bar-info: #3498db;
+    
+    /* Code Block Renkleri */
+    --code-bg: #1a1a24;
+    --code-text: #ffffff;
+    --code-border: #3a3a48;
+    --code-keyword: #c5a572;
+    --code-string: #27ae60;
+    --code-comment: #7a7a7a;
+    --code-function: #3498db;
+    --code-variable: #f39c12;
+    
+    /* Scrollbar Renkleri */
+    --scrollbar-track: #1a1a24;
+    --scrollbar-thumb: #3a3a48;
+    --scrollbar-thumb-hover: #c5a572;
+    
+    /* Cam Efekti (Glassmorphism) */
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.36);
+    --glass-blur: blur(10px);
+    
+    /* Özel Bileşen Renkleri */
+    --card-bg: rgba(37, 37, 48, 0.9);
+    --card-header-bg: rgba(197, 165, 114, 0.1);
+    --card-footer-bg: rgba(197, 165, 114, 0.05);
+    --card-border: rgba(197, 165, 114, 0.2);
+    
+    --modal-bg: rgba(37, 37, 48, 0.98);
+    --modal-header-bg: rgba(197, 165, 114, 0.1);
+    --modal-footer-bg: rgba(197, 165, 114, 0.05);
+    --modal-border: rgba(197, 165, 114, 0.2);
+    
+    --dropdown-bg: rgba(37, 37, 48, 0.98);
+    --dropdown-link: #ffffff;
+    --dropdown-link-hover-bg: rgba(197, 165, 114, 0.15);
+    --dropdown-link-active-bg: #c5a572;
+    --dropdown-link-active-text: #0f0f13;
+    --dropdown-border: rgba(197, 165, 114, 0.2);
+    --dropdown-divider: rgba(197, 165, 114, 0.2);
+    
+    --tooltip-bg: #c5a572;
+    --tooltip-text: #0f0f13;
+    
+    --popover-bg: rgba(37, 37, 48, 0.98);
+    --popover-header-bg: rgba(197, 165, 114, 0.1);
+    --popover-border: rgba(197, 165, 114, 0.2);
+    
+    --list-group-bg: transparent;
+    --list-group-border: rgba(197, 165, 114, 0.2);
+    --list-group-item-hover: rgba(197, 165, 114, 0.1);
+    --list-group-item-active-bg: #c5a572;
+    --list-group-item-active-text: #0f0f13;
+    
+    --pagination-bg: transparent;
+    --pagination-border: rgba(197, 165, 114, 0.2);
+    --pagination-hover-bg: rgba(197, 165, 114, 0.15);
+    --pagination-hover-border: rgba(197, 165, 114, 0.3);
+    --pagination-active-bg: #c5a572;
+    --pagination-active-border: #c5a572;
+    --pagination-active-text: #0f0f13;
+    --pagination-disabled-bg: transparent;
+    --pagination-disabled-text: #5a5a6a;
+    
+    /* Özel Gradient'ler - Premium */
+    --gradient-primary: linear-gradient(135deg, #c5a572 0%, #d4b98c 50%, #c5a572 100%);
+    --gradient-secondary: linear-gradient(135deg, #2c3e50 0%, #34495e 50%, #2c3e50 100%);
+    --gradient-success: linear-gradient(135deg, #27ae60 0%, #2ecc71 50%, #27ae60 100%);
+    --gradient-danger: linear-gradient(135deg, #c0392b 0%, #e74c3c 50%, #c0392b 100%);
+    --gradient-warning: linear-gradient(135deg, #f39c12 0%, #f1c40f 50%, #f39c12 100%);
+    --gradient-info: linear-gradient(135deg, #3498db 0%, #2980b9 50%, #3498db 100%);
+    --gradient-gold: linear-gradient(135deg, #c5a572 0%, #e6d5b8 50%, #c5a572 100%);
+    --gradient-dark: linear-gradient(135deg, #0f0f13 0%, #1a1a24 50%, #0f0f13 100%);
+    --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+    
+    /* Animasyonlar */
+    --transition-premium: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-gold: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* Premium Tema Özel Stiller */
+[data-theme="premium"] {
+    color-scheme: dark;
+    background: var(--bg-primary);
+    background-image: 
+        radial-gradient(circle at 10% 20%, rgba(197, 165, 114, 0.03) 0%, transparent 30%),
+        radial-gradient(circle at 90% 80%, rgba(197, 165, 114, 0.03) 0%, transparent 30%);
+}
+
+/* Cam Efekti (Glassmorphism) */
+[data-theme="premium"] .glass {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+}
+
+[data-theme="premium"] .glass-card {
+    background: rgba(37, 37, 48, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(197, 165, 114, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.36);
+}
+
+/* Premium Kartlar */
+[data-theme="premium"] .card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    box-shadow: var(--shadow-card);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+}
+
+[data-theme="premium"] .card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+    transition: left 0.8s ease;
+}
+
+[data-theme="premium"] .card:hover::before {
+    left: 100%;
+}
+
+[data-theme="premium"] .card-header {
+    background: var(--card-header-bg);
+    border-bottom: 1px solid var(--card-border);
+    color: var(--primary-color);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+[data-theme="premium"] .card-footer {
+    background: var(--card-footer-bg);
+    border-top: 1px solid var(--card-border);
+}
+
+/* Premium Butonlar */
+[data-theme="premium"] .btn {
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition-premium);
+    border: none;
+    background-size: 200% 100%;
+    background-position: left center;
+}
+
+[data-theme="premium"] .btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+[data-theme="premium"] .btn:hover::after {
+    width: 300px;
+    height: 300px;
+}
+
+[data-theme="premium"] .btn-primary {
+    background-image: var(--btn-primary-bg);
+}
+
+[data-theme="premium"] .btn-primary:hover {
+    background-position: right center;
+    box-shadow: var(--shadow-gold);
+}
+
+[data-theme="premium"] .btn-gold {
+    background-image: var(--btn-gold-bg);
+    color: var(--btn-gold-text);
+}
+
+/* Premium Form Elemanları */
+[data-theme="premium"] .form-control {
+    background: var(--input-bg);
+    border: 1px solid var(--input-border);
+    color: var(--input-text);
+    transition: var(--transition-premium);
+}
+
+[data-theme="premium"] .form-control:focus {
+    border-color: var(--input-focus-border);
+    box-shadow: var(--input-focus-shadow);
+    transform: translateY(-2px);
+}
+
+[data-theme="premium"] .form-label {
+    color: var(--primary-color);
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
+/* Premium Tablolar */
+[data-theme="premium"] .table {
+    border-collapse: separate;
+    border-spacing: 0 8px;
+}
+
+[data-theme="premium"] .table thead th {
+    background: var(--table-header-bg);
+    color: var(--table-header-text);
+    border: none;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
+
+[data-theme="premium"] .table tbody tr {
+    background: rgba(37, 37, 48, 0.5);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    transition: var(--transition-premium);
+}
+
+[data-theme="premium"] .table tbody tr:hover {
+    background: rgba(197, 165, 114, 0.1);
+    transform: scale(1.01);
+    box-shadow: var(--shadow-gold);
+}
+
+[data-theme="premium"] .table td {
+    border: none;
+    padding: 1rem;
+}
+
+/* Premium Navigasyon */
+[data-theme="premium"] .navbar {
+    background: var(--navbar-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-gold);
+}
+
+[data-theme="premium"] .navbar-brand {
+    background: var(--gradient-gold);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+[data-theme="premium"] .nav-link {
+    position: relative;
+    transition: var(--transition-premium);
+}
+
+[data-theme="premium"] .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--primary-color);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+[data-theme="premium"] .nav-link:hover::after,
+[data-theme="premium"] .nav-link.active::after {
+    width: 80%;
+}
+
+/* Premium Dropdown */
+[data-theme="premium"] .dropdown-menu {
+    background: var(--dropdown-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--dropdown-border);
+    box-shadow: var(--shadow-dropdown);
+}
+
+[data-theme="premium"] .dropdown-item {
+    transition: var(--transition-premium);
+    position: relative;
+    padding-left: 2rem;
+}
+
+[data-theme="premium"] .dropdown-item::before {
+    content: '◆';
+    position: absolute;
+    left: 0.5rem;
+    color: var(--primary-color);
+    opacity: 0;
+    transition: var(--transition-premium);
+}
+
+[data-theme="premium"] .dropdown-item:hover::before {
+    opacity: 1;
+    left: 0.8rem;
+}
+
+/* Premium Modal */
+[data-theme="premium"] .modal-content {
+    background: var(--modal-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--modal-border);
+    box-shadow: var(--shadow-modal);
+}
+
+[data-theme="premium"] .modal-header {
+    background: var(--modal-header-bg);
+    border-bottom: 1px solid var(--modal-border);
+}
+
+[data-theme="premium"] .modal-header .modal-title {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+[data-theme="premium"] .modal-footer {
+    background: var(--modal-footer-bg);
+    border-top: 1px solid var(--modal-border);
+}
+
+/* Premium Badge */
+[data-theme="premium"] .badge {
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+}
+
+[data-theme="premium"] .badge-gold {
+    background: var(--badge-gold-bg);
+    color: var(--badge-gold-text);
+}
+
+/* Premium Progress */
+[data-theme="premium"] .progress {
+    height: 0.75rem;
+    border-radius: 1rem;
+    background: var(--progress-bg);
+    overflow: hidden;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="premium"] .progress-bar {
+    position: relative;
+    overflow: hidden;
+    background: var(--progress-bar-primary);
+    background-image: var(--gradient-primary);
+}
+
+[data-theme="premium"] .progress-bar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+/* Premium Alert */
+[data-theme="premium"] .alert {
+    border: none;
+    border-left: 4px solid;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+[data-theme="premium"] .alert-primary {
+    background: var(--alert-primary-bg);
+    border-left-color: var(--primary-color);
+}
+
+/* Premium List Group */
+[data-theme="premium"] .list-group-item {
+    background: transparent;
+    border: 1px solid var(--list-group-border);
+    margin-bottom: 0.5rem;
+    border-radius: 0.5rem !important;
+    transition: var(--transition-premium);
+}
+
+[data-theme="premium"] .list-group-item:hover {
+    background: var(--list-group-item-hover);
+    transform: translateX(5px);
+    border-color: var(--primary-color);
+}
+
+[data-theme="premium"] .list-group-item.active {
+    background: var(--list-group-item-active-bg);
+    border-color: var(--list-group-item-active-bg);
+    color: var(--list-group-item-active-text);
+}
+
+/* Premium Pagination */
+[data-theme="premium"] .pagination .page-link {
+    background: var(--pagination-bg);
+    border: 1px solid var(--pagination-border);
+    color: var(--text-primary);
+    margin: 0 0.2rem;
+    border-radius: 0.5rem;
+    transition: var(--transition-premium);
+}
+
+[data-theme="premium"] .pagination .page-link:hover {
+    background: var(--pagination-hover-bg);
+    border-color: var(--pagination-hover-border);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-gold);
+}
+
+[data-theme="premium"] .pagination .page-item.active .page-link {
+    background: var(--pagination-active-bg);
+    border-color: var(--pagination-active-border);
+    color: var(--pagination-active-text);
+}
+
+/* Premium Code Block */
+[data-theme="premium"] pre {
+    background: var(--code-bg);
+    border: 1px solid var(--code-border);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    position: relative;
+}
+
+[data-theme="premium"] pre::before {
+    content: '</>';
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+    color: var(--primary-color);
+    font-size: 0.875rem;
+    opacity: 0.5;
+}
+
+/* Premium Scrollbar */
+[data-theme="premium"] ::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+[data-theme="premium"] ::-webkit-scrollbar-track {
+    background: var(--scrollbar-track);
+}
+
+[data-theme="premium"] ::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb);
+    border-radius: 6px;
+    border: 2px solid var(--scrollbar-track);
+}
+
+[data-theme="premium"] ::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-thumb-hover);
+}
+
+/* Premium Loading Spinner */
+[data-theme="premium"] .spinner-premium {
+    width: 50px;
+    height: 50px;
+    border: 3px solid rgba(197, 165, 114, 0.1);
+    border-top-color: var(--primary-color);
+    border-radius: 50%;
+    animation: spin-premium 1s linear infinite;
+}
+
+[data-theme="premium"] .spinner-premium::before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    border: 3px solid transparent;
+    border-top-color: var(--primary-light);
+    border-radius: 50%;
+    animation: spin-premium 2s linear infinite;
+}
+
+@keyframes spin-premium {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Premium Dividers */
+[data-theme="premium"] .divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+    margin: 2rem 0;
+}
+
+[data-theme="premium"] .divider-vertical {
+    width: 1px;
+    background: linear-gradient(180deg, transparent, var(--primary-color), transparent);
+}
+
+/* Premium Tooltips */
+[data-theme="premium"] .tooltip {
+    background: var(--tooltip-bg);
+    color: var(--tooltip-text);
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    box-shadow: var(--shadow-gold);
+}
+
+/* Premium Animasyonlar */
+[data-theme="premium"] .fade-in {
+    animation: fadeInPremium 0.6s ease;
+}
+
+[data-theme="premium"] .slide-up {
+    animation: slideUpPremium 0.5s ease;
+}
+
+[data-theme="premium"] .slide-in {
+    animation: slideInPremium 0.5s ease;
+}
+
+@keyframes fadeInPremium {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUpPremium {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInPremium {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Premium Glow Efektleri */
+[data-theme="premium"] .glow {
+    animation: glow 2s ease-in-out infinite;
+}
+
+@keyframes glow {
+    0%, 100% {
+        box-shadow: 0 0 5px rgba(197, 165, 114, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(197, 165, 114, 0.6);
+    }
+}
+
+[data-theme="premium"] .glow-text {
+    animation: glowText 2s ease-in-out infinite;
+}
+
+@keyframes glowText {
+    0%, 100% {
+        text-shadow: 0 0 5px rgba(197, 165, 114, 0.3);
+    }
+    50% {
+        text-shadow: 0 0 20px rgba(197, 165, 114, 0.6);
+    }
+}
+
+/* Premium Border Animasyonları */
+[data-theme="premium"] .border-glow {
+    position: relative;
+}
+
+[data-theme="premium"] .border-glow::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, transparent, var(--primary-color), transparent);
+    border-radius: inherit;
+    z-index: -1;
+    animation: borderRotate 3s linear infinite;
+}
+
+@keyframes borderRotate {
+    0% { filter: hue-rotate(0deg); }
+    100% { filter: hue-rotate(360deg); }
+}
+
+/* Premium İstatistik Kartları */
+[data-theme="premium"] .stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    transition: var(--transition-premium);
+    position: relative;
+    overflow: hidden;
+}
+
+[data-theme="premium"] .stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-gold-lg);
+}
+
+[data-theme="premium"] .stat-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--gradient-gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+    font-size: 1.5rem;
+}
+
+[data-theme="premium"] .stat-value {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0.25rem;
+}
+
+[data-theme="premium"] .stat-label {
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.875rem;
+}
+
+/* Premium Timeline */
+[data-theme="premium"] .timeline-item {
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 2rem;
+}
+
+[data-theme="premium"] .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+    width: 12px;
+    height: 12px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px rgba(197, 165, 114, 0.2);
+}
+
+[data-theme="premium"] .timeline-item::after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 1.5rem;
+    bottom: -1.5rem;
+    width: 2px;
+    background: linear-gradient(180deg, var(--primary-color), transparent);
+}
+
+[data-theme="premium"] .timeline-item:last-child::after {
+    display: none;
+}
+
+/* Responsive Düzenlemeler */
+@media (max-width: 768px) {
+    [data-theme="premium"] .stat-card {
+        margin-bottom: 1rem;
+    }
+}
+
+/* Print Stilleri */
+@media print {
+    [data-theme="premium"] {
+        background: #ffffff;
+        color: #000000;
+    }
+    
+    [data-theme="premium"] .card,
+    [data-theme="premium"] .modal-content,
+    [data-theme="premium"] .dropdown-menu {
+        background: #ffffff;
+        border: 1px solid #dee2e6;
+        box-shadow: none;
+    }
+}

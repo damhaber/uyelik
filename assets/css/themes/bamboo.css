@@ -1,0 +1,703 @@
+/**
+ * AI Community Engine - Bambu Teması
+ * 
+ * Yeşil tonlarında, bambu motifli, doğa dostu tema
+ * Huzur, denge ve doğallık odaklı tasarım
+ * 
+ * @package AI_Community_Engine
+ * @subpackage Assets_CSS_Themes
+ */
+
+:root {
+    /* Ana Renkler - Bambu Paleti */
+    --bamboo-green-dark: #1b5e20;
+    --bamboo-green: #2e7d32;
+    --bamboo-green-light: #4caf50;
+    --bamboo-green-lighter: #81c784;
+    --bamboo-green-soft: #e8f5e8;
+    --bamboo-stem: #8d6e63;
+    --bamboo-stem-light: #a1887f;
+    --bamboo-leaf: #66bb6a;
+    --bamboo-leaf-dark: #43a047;
+    --bamboo-forest: #004d40;
+    
+    /* Doğal Renkler */
+    --bamboo-earth: #795548;
+    --bamboo-earth-light: #8d6e63;
+    --bamboo-sky: #90caf9;
+    --bamboo-water: #4fc3f7;
+    --bamboo-stone: #757575;
+    --bamboo-moss: #7cb342;
+    
+    /* Arka Planlar */
+    --bamboo-bg-primary: #f1f8e9;
+    --bamboo-bg-secondary: #dcedc8;
+    --bamboo-bg-tertiary: #c5e1a5;
+    --bamboo-bg-dark: #1b5e20;
+    --bamboo-bg-paper: #fff3e0;
+    
+    /* Metin Renkleri */
+    --bamboo-text-dark: #1b5e20;
+    --bamboo-text-primary: #2e7d32;
+    --bamboo-text-secondary: #558b2f;
+    --bamboo-text-light: #ffffff;
+    --bamboo-text-muted: #9e9e9e;
+    
+    /* Kenarlıklar */
+    --bamboo-border: #a5d6a7;
+    --bamboo-border-dark: #66bb6a;
+    --bamboo-border-light: #c8e6c9;
+    
+    /* Gölgeler - Doğal Yumuşaklıkta */
+    --bamboo-shadow-sm: 0 2px 4px rgba(46, 125, 50, 0.1);
+    --bamboo-shadow-md: 0 4px 8px rgba(46, 125, 50, 0.15);
+    --bamboo-shadow-lg: 0 8px 16px rgba(46, 125, 50, 0.2);
+    --bamboo-shadow-xl: 0 12px 24px rgba(46, 125, 50, 0.25);
+    
+    /* Geçişler - Doğal Akış */
+    --bamboo-transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    /* Yazı Tipleri */
+    --bamboo-font-heading: 'Quicksand', 'Helvetica Neue', sans-serif;
+    --bamboo-font-body: 'Nunito', 'Arial', sans-serif;
+    --bamboo-font-hand: 'Caveat', 'Comic Sans MS', cursive;
+}
+
+/* Genel Stiller */
+body.bamboo-theme {
+    background: var(--bamboo-bg-primary);
+    color: var(--bamboo-text-dark);
+    font-family: var(--bamboo-font-body);
+    line-height: 1.8;
+    position: relative;
+    min-height: 100vh;
+    background-image: 
+        linear-gradient(rgba(200, 230, 201, 0.3) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(200, 230, 201, 0.3) 1px, transparent 1px);
+    background-size: 50px 50px;
+}
+
+body.bamboo-theme::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" opacity="0.03"><path d="M30 10 L30 90 M35 15 L35 85 M40 20 L40 80 M45 25 L45 75" stroke="%232e7d32" stroke-width="2"/><circle cx="32" cy="15" r="3" fill="%232e7d32"/><circle cx="38" cy="25" r="3" fill="%232e7d32"/><circle cx="43" cy="35" r="3" fill="%232e7d32"/><circle cx="37" cy="45" r="3" fill="%232e7d32"/><circle cx="42" cy="55" r="3" fill="%232e7d32"/><circle cx="33" cy="65" r="3" fill="%232e7d32"/><circle cx="39" cy="75" r="3" fill="%232e7d32"/><circle cx="44" cy="85" r="3" fill="%232e7d32"/></svg>');
+    background-repeat: repeat;
+    pointer-events: none;
+    z-index: -1;
+    animation: bambooWave 60s linear infinite;
+}
+
+@keyframes bambooWave {
+    0% { background-position: 0 0; }
+    100% { background-position: 100px 100px; }
+}
+
+/* Başlıklar - Bambu Filizleri */
+.bamboo-theme h1, 
+.bamboo-theme h2, 
+.bamboo-theme h3, 
+.bamboo-theme h4, 
+.bamboo-theme h5, 
+.bamboo-theme h6 {
+    font-family: var(--bamboo-font-heading);
+    color: var(--bamboo-text-dark);
+    font-weight: 600;
+    letter-spacing: -0.3px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.bamboo-theme h1::before,
+.bamboo-theme h2::before {
+    content: '🎋';
+    position: absolute;
+    left: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    opacity: 0.5;
+    animation: bambooSway 3s ease-in-out infinite;
+}
+
+@keyframes bambooSway {
+    0%, 100% { transform: translateY(-50%) rotate(-5deg); }
+    50% { transform: translateY(-50%) rotate(5deg); }
+}
+
+.bamboo-theme h1::after,
+.bamboo-theme h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, 
+        transparent,
+        var(--bamboo-green),
+        var(--bamboo-green-light),
+        var(--bamboo-green),
+        transparent
+    );
+    border-radius: 3px;
+}
+
+/* Linkler - Sarmaşık Etkisi */
+.bamboo-theme a {
+    color: var(--bamboo-green-dark);
+    text-decoration: none;
+    transition: var(--bamboo-transition);
+    position: relative;
+    padding: 0 2px;
+}
+
+.bamboo-theme a::before {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, 
+        transparent,
+        var(--bamboo-green),
+        var(--bamboo-green-light),
+        var(--bamboo-green),
+        transparent
+    );
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s;
+}
+
+.bamboo-theme a:hover {
+    color: var(--bamboo-forest);
+    text-shadow: 0 2px 4px rgba(46, 125, 50, 0.2);
+}
+
+.bamboo-theme a:hover::before {
+    transform: scaleX(1);
+}
+
+/* Butonlar - Bambu Kesiti */
+.bamboo-theme .btn {
+    padding: 15px 35px;
+    border: none;
+    background: linear-gradient(135deg, 
+        var(--bamboo-green-dark),
+        var(--bamboo-green)
+    );
+    color: var(--bamboo-bg-primary);
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: var(--bamboo-transition);
+    position: relative;
+    overflow: hidden;
+    border-radius: 30px 10px 30px 10px;
+    box-shadow: var(--bamboo-shadow-md);
+}
+
+.bamboo-theme .btn::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, 
+        var(--bamboo-green-lighter),
+        var(--bamboo-leaf),
+        var(--bamboo-green-dark)
+    );
+    border-radius: 32px 12px 32px 12px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.bamboo-theme .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--bamboo-shadow-lg);
+    background: linear-gradient(135deg, 
+        var(--bamboo-green),
+        var(--bamboo-green-light)
+    );
+}
+
+.bamboo-theme .btn:hover::before {
+    opacity: 1;
+    animation: borderRotate 2s linear infinite;
+}
+
+@keyframes borderRotate {
+    0% { filter: hue-rotate(0deg); }
+    100% { filter: hue-rotate(360deg); }
+}
+
+.bamboo-theme .btn:active {
+    transform: translateY(0);
+    box-shadow: var(--bamboo-shadow-sm);
+}
+
+.bamboo-theme .btn-secondary {
+    background: transparent;
+    color: var(--bamboo-green-dark);
+    border: 2px solid var(--bamboo-green);
+}
+
+.bamboo-theme .btn-secondary:hover {
+    background: var(--bamboo-green-soft);
+    color: var(--bamboo-forest);
+}
+
+/* Kartlar - Bambu Yaprağı */
+.bamboo-theme .card {
+    background: var(--bamboo-bg-paper);
+    border-radius: 20px 5px 20px 5px;
+    padding: 30px;
+    box-shadow: var(--bamboo-shadow-md);
+    border: 1px solid var(--bamboo-border);
+    transition: var(--bamboo-transition);
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(5px);
+}
+
+.bamboo-theme .card::before {
+    content: '🎋';
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+    font-size: 80px;
+    opacity: 0.1;
+    transform: rotate(15deg);
+    transition: var(--bamboo-transition);
+    animation: bambooGrow 4s ease-in-out infinite;
+}
+
+@keyframes bambooGrow {
+    0%, 100% { transform: rotate(15deg) scale(1); }
+    50% { transform: rotate(10deg) scale(1.1); }
+}
+
+.bamboo-theme .card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: var(--bamboo-shadow-xl);
+    border-color: var(--bamboo-green);
+}
+
+.bamboo-theme .card:hover::before {
+    opacity: 0.2;
+    transform: rotate(0deg) scale(1.2);
+}
+
+.bamboo-theme .card-title {
+    color: var(--bamboo-text-dark);
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+.bamboo-theme .card-title::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50%;
+    height: 2px;
+    background: var(--bamboo-green);
+    border-radius: 2px;
+}
+
+/* Form Elemanları - Doğal Dokunuş */
+.bamboo-theme input,
+.bamboo-theme select,
+.bamboo-theme textarea {
+    padding: 15px;
+    border: none;
+    border-bottom: 2px solid var(--bamboo-border);
+    background: rgba(255, 255, 255, 0.7);
+    font-size: 1rem;
+    transition: var(--bamboo-transition);
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    backdrop-filter: blur(5px);
+}
+
+.bamboo-theme input:focus,
+.bamboo-theme select:focus,
+.bamboo-theme textarea:focus {
+    outline: none;
+    border-bottom-color: var(--bamboo-green);
+    background: white;
+    box-shadow: 0 5px 15px rgba(46, 125, 50, 0.1);
+}
+
+.bamboo-theme input:hover,
+.bamboo-theme select:hover,
+.bamboo-theme textarea:hover {
+    border-bottom-color: var(--bamboo-green-light);
+}
+
+.bamboo-theme label {
+    color: var(--bamboo-text-secondary);
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* Tablolar - Bambu Dokuması */
+.bamboo-theme table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 5px;
+    background: transparent;
+}
+
+.bamboo-theme th {
+    background: var(--bamboo-green-dark);
+    color: var(--bamboo-bg-primary);
+    padding: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+    position: relative;
+}
+
+.bamboo-theme th:first-child {
+    border-radius: 15px 0 0 15px;
+}
+
+.bamboo-theme th:last-child {
+    border-radius: 0 15px 15px 0;
+}
+
+.bamboo-theme td {
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.7);
+    border-bottom: 1px solid var(--bamboo-border);
+    backdrop-filter: blur(5px);
+}
+
+.bamboo-theme tr:hover td {
+    background: var(--bamboo-green-soft);
+    transform: scale(1.01);
+    box-shadow: var(--bamboo-shadow-sm);
+}
+
+/* Bildirimler - Bambu Şişeleri */
+.bamboo-theme .alert {
+    padding: 20px 25px;
+    margin: 20px 0;
+    border-radius: 30px 5px 30px 5px;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    border-left: 5px solid;
+}
+
+.bamboo-theme .alert::before {
+    content: '🎍';
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    opacity: 0.2;
+    animation: bambooSpin 10s linear infinite;
+}
+
+@keyframes bambooSpin {
+    from { transform: translateY(-50%) rotate(0deg); }
+    to { transform: translateY(-50%) rotate(360deg); }
+}
+
+.bamboo-theme .alert-success {
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.1), rgba(139, 195, 74, 0.1));
+    border-left-color: var(--bamboo-green);
+    color: var(--bamboo-green-dark);
+}
+
+.bamboo-theme .alert-warning {
+    background: linear-gradient(135deg, rgba(255, 193, 7, 0.1), rgba(255, 152, 0, 0.1));
+    border-left-color: #ff9800;
+    color: #e65100;
+}
+
+.bamboo-theme .alert-danger {
+    background: linear-gradient(135deg, rgba(244, 67, 54, 0.1), rgba(229, 57, 53, 0.1));
+    border-left-color: #d32f2f;
+    color: #b71c1c;
+}
+
+.bamboo-theme .alert-info {
+    background: linear-gradient(135deg, rgba(33, 150, 243, 0.1), rgba(3, 169, 244, 0.1));
+    border-left-color: #1976d2;
+    color: #0d47a1;
+}
+
+/* Navigasyon - Bambu Ormanı */
+.bamboo-theme .navbar {
+    background: linear-gradient(135deg, 
+        var(--bamboo-green-dark),
+        var(--bamboo-forest)
+    );
+    padding: 20px 30px;
+    position: relative;
+    border-bottom: 3px solid var(--bamboo-green-light);
+}
+
+.bamboo-theme .navbar::before {
+    content: '🎋🎋🎋';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 20px;
+    opacity: 0.1;
+    letter-spacing: 10px;
+    animation: bambooSlide 20s linear infinite;
+}
+
+@keyframes bambooSlide {
+    from { background-position: 0 0; }
+    to { background-position: 100px 0; }
+}
+
+.bamboo-theme .navbar-brand {
+    color: var(--bamboo-bg-primary) !important;
+    font-size: 1.8rem;
+    font-weight: 600;
+    font-family: var(--bamboo-font-heading);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.bamboo-theme .navbar-brand::before,
+.bamboo-theme .navbar-brand::after {
+    content: '🎋';
+    font-size: 1rem;
+    margin: 0 5px;
+    opacity: 0.7;
+}
+
+.bamboo-theme .navbar-nav .nav-link {
+    color: var(--bamboo-bg-primary) !important;
+    margin: 0 15px;
+    padding: 8px 20px !important;
+    border-radius: 30px;
+    position: relative;
+    transition: var(--bamboo-transition);
+    opacity: 0.9;
+}
+
+.bamboo-theme .navbar-nav .nav-link::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: var(--bamboo-green-lighter);
+    transition: var(--bamboo-transition);
+}
+
+.bamboo-theme .navbar-nav .nav-link:hover,
+.bamboo-theme .navbar-nav .nav-link.active {
+    background: rgba(255, 255, 255, 0.1);
+    opacity: 1;
+}
+
+.bamboo-theme .navbar-nav .nav-link:hover::before,
+.bamboo-theme .navbar-nav .nav-link.active::before {
+    width: 80%;
+}
+
+/* Footer - Bambu Kökleri */
+.bamboo-theme footer {
+    background: linear-gradient(135deg, 
+        var(--bamboo-forest),
+        var(--bamboo-green-dark)
+    );
+    color: var(--bamboo-bg-primary);
+    padding: 60px 0 30px;
+    margin-top: 80px;
+    position: relative;
+}
+
+.bamboo-theme footer::before {
+    content: '🎋🎋🎋🎋🎋';
+    position: absolute;
+    top: -15px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 30px;
+    opacity: 0.2;
+    letter-spacing: 15px;
+    text-shadow: 0 0 10px var(--bamboo-green-lighter);
+}
+
+/* Özel Bambu Efektleri */
+.bamboo-theme .bamboo-grow {
+    animation: bambooGrowIn 0.8s ease-out forwards;
+}
+
+@keyframes bambooGrowIn {
+    0% { transform: scale(0) rotate(-10deg); opacity: 0; }
+    100% { transform: scale(1) rotate(0); opacity: 1; }
+}
+
+.bamboo-theme .leaf-fall {
+    position: relative;
+    overflow: hidden;
+}
+
+.bamboo-theme .leaf-fall::after {
+    content: '🍃';
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    font-size: 20px;
+    animation: leafFall 5s linear infinite;
+}
+
+@keyframes leafFall {
+    0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+}
+
+/* Bambu Ayırıcılar */
+.bamboo-theme .divider {
+    height: 30px;
+    background: repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 20px,
+        var(--bamboo-border) 20px,
+        var(--bamboo-border) 40px
+    );
+    margin: 30px 0;
+    position: relative;
+}
+
+.bamboo-theme .divider::before,
+.bamboo-theme .divider::after {
+    content: '🎋';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    opacity: 0.5;
+}
+
+.bamboo-theme .divider::before {
+    left: 0;
+}
+
+.bamboo-theme .divider::after {
+    right: 0;
+}
+
+/* Doğa İkonları */
+.bamboo-theme .nature-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, 
+        var(--bamboo-green-light),
+        var(--bamboo-leaf)
+    );
+    border-radius: 50% 50% 50% 0;
+    transform: rotate(-45deg);
+    position: relative;
+    margin: 20px;
+    animation: leafFloat 3s ease-in-out infinite;
+}
+
+@keyframes leafFloat {
+    0%, 100% { transform: rotate(-45deg) translateY(0); }
+    50% { transform: rotate(-45deg) translateY(-10px); }
+}
+
+/* Responsive Tasarım */
+@media (max-width: 1024px) {
+    .bamboo-theme h1 {
+        font-size: 2.5rem;
+    }
+    
+    .bamboo-theme h2 {
+        font-size: 2rem;
+    }
+    
+    .bamboo-theme .card {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .bamboo-theme .navbar {
+        padding: 15px;
+    }
+    
+    .bamboo-theme .navbar-brand {
+        font-size: 1.5rem;
+    }
+    
+    .bamboo-theme .btn {
+        padding: 12px 25px;
+    }
+    
+    .bamboo-theme h1::before,
+    .bamboo-theme h2::before {
+        display: none;
+    }
+    
+    .bamboo-theme .card::before {
+        font-size: 60px;
+    }
+}
+
+/* Mevsimsel Değişim */
+.bamboo-theme.spring {
+    filter: hue-rotate(0deg) brightness(1.1);
+}
+
+.bamboo-theme.summer {
+    filter: hue-rotate(10deg) brightness(1.2);
+}
+
+.bamboo-theme.autumn {
+    filter: hue-rotate(-20deg) sepia(0.2);
+}
+
+.bamboo-theme.winter {
+    filter: hue-rotate(30deg) brightness(0.9);
+}
+
+/* Yazdırma Stilleri */
+@media print {
+    .bamboo-theme {
+        background: white;
+        filter: grayscale(1);
+    }
+    
+    .bamboo-theme .navbar,
+    .bamboo-theme footer,
+    .bamboo-theme .btn {
+        display: none;
+    }
+}

@@ -1,0 +1,502 @@
+/**
+ * AI Community Engine - Ejderha Teması
+ * 
+ * Kırmızı ve altın renklerinde, ejderha motifli tema
+ * Çin Yeni Yılı ve festivaller için özel tasarım
+ * 
+ * @package AI_Community_Engine
+ * @subpackage Assets_CSS_Themes
+ */
+
+:root {
+    /* Ana Renkler */
+    --dragon-red: #c62828;
+    --dragon-red-light: #ef5350;
+    --dragon-red-dark: #8b0000;
+    --dragon-gold: #ffd700;
+    --dragon-gold-light: #fff9c4;
+    --dragon-gold-dark: #b8860b;
+    --dragon-black: #1a1a1a;
+    --dragon-white: #fff5f5;
+    
+    /* Vurgu Renkleri */
+    --dragon-accent-1: #ff6b6b;
+    --dragon-accent-2: #ffb74d;
+    --dragon-accent-3: #4a90e2;
+    
+    /* Metin Renkleri */
+    --dragon-text-dark: #2c3e50;
+    --dragon-text-light: #ffffff;
+    --dragon-text-muted: #7f8c8d;
+    
+    /* Arka Planlar */
+    --dragon-bg-primary: #ffffff;
+    --dragon-bg-secondary: #fff5f5;
+    --dragon-bg-tertiary: #ffebee;
+    --dragon-bg-dark: #1a1a1a;
+    
+    /* Kenarlıklar */
+    --dragon-border: #f0f0f0;
+    --dragon-border-dark: #c62828;
+    --dragon-border-light: #ffcdd2;
+    
+    /* Gölgeler */
+    --dragon-shadow-sm: 0 2px 4px rgba(198, 40, 40, 0.1);
+    --dragon-shadow-md: 0 4px 8px rgba(198, 40, 40, 0.15);
+    --dragon-shadow-lg: 0 8px 16px rgba(198, 40, 40, 0.2);
+    --dragon-shadow-xl: 0 12px 24px rgba(198, 40, 40, 0.25);
+    
+    /* Geçişler */
+    --dragon-transition: all 0.3s ease;
+    
+    /* Yazı Tipleri */
+    --dragon-font-heading: 'Noto Serif SC', 'Georgia', serif;
+    --dragon-font-body: 'Noto Sans SC', 'Arial', sans-serif;
+}
+
+/* Genel Stiller */
+body.dragon-theme {
+    background: linear-gradient(135deg, var(--dragon-bg-secondary), var(--dragon-bg-primary));
+    color: var(--dragon-text-dark);
+    font-family: var(--dragon-font-body);
+    position: relative;
+    min-height: 100vh;
+}
+
+body.dragon-theme::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" opacity="0.05"><path d="M50 10 Q60 20 70 15 Q80 10 75 25 Q70 40 60 35 Q50 30 45 40 Q40 50 30 45 Q20 40 25 30 Q30 20 40 25 Q45 30 50 10" fill="%23c62828"/><path d="M55 45 Q65 55 75 50 Q85 45 80 60 Q75 75 65 70 Q55 65 50 75 Q45 85 35 80 Q25 75 30 65 Q35 55 45 60 Q50 55 55 45" fill="%23ffd700"/></svg>');
+    background-repeat: repeat;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Başlıklar */
+.dragon-theme h1, 
+.dragon-theme h2, 
+.dragon-theme h3, 
+.dragon-theme h4, 
+.dragon-theme h5, 
+.dragon-theme h6 {
+    font-family: var(--dragon-font-heading);
+    color: var(--dragon-red-dark);
+    position: relative;
+    display: inline-block;
+}
+
+.dragon-theme h1::after,
+.dragon-theme h2::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, var(--dragon-red), var(--dragon-gold), var(--dragon-red));
+    border-radius: 2px;
+}
+
+/* Linkler */
+.dragon-theme a {
+    color: var(--dragon-red);
+    text-decoration: none;
+    transition: var(--dragon-transition);
+    position: relative;
+}
+
+.dragon-theme a:hover {
+    color: var(--dragon-red-dark);
+    text-decoration: none;
+}
+
+.dragon-theme a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--dragon-red);
+    transition: var(--dragon-transition);
+}
+
+.dragon-theme a:hover::after {
+    width: 100%;
+}
+
+/* Butonlar */
+.dragon-theme .btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--dragon-transition);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.dragon-theme .btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+    z-index: -1;
+}
+
+.dragon-theme .btn:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.dragon-theme .btn-primary {
+    background: linear-gradient(135deg, var(--dragon-red), var(--dragon-red-dark));
+    color: var(--dragon-gold);
+    box-shadow: var(--dragon-shadow-md);
+}
+
+.dragon-theme .btn-primary:hover {
+    background: linear-gradient(135deg, var(--dragon-red-dark), var(--dragon-red));
+    color: var(--dragon-gold-light);
+    transform: translateY(-2px);
+    box-shadow: var(--dragon-shadow-lg);
+}
+
+.dragon-theme .btn-secondary {
+    background: var(--dragon-gold);
+    color: var(--dragon-red-dark);
+    border: 2px solid var(--dragon-red);
+}
+
+.dragon-theme .btn-secondary:hover {
+    background: var(--dragon-gold-light);
+    border-color: var(--dragon-red-dark);
+}
+
+/* Kartlar */
+.dragon-theme .card {
+    background: var(--dragon-bg-primary);
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: var(--dragon-shadow-sm);
+    border: 1px solid var(--dragon-border);
+    transition: var(--dragon-transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.dragon-theme .card::before {
+    content: '🐉';
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    font-size: 80px;
+    opacity: 0.1;
+    transform: rotate(15deg);
+    transition: var(--dragon-transition);
+}
+
+.dragon-theme .card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--dragon-shadow-lg);
+    border-color: var(--dragon-red-light);
+}
+
+.dragon-theme .card:hover::before {
+    opacity: 0.2;
+    transform: rotate(0deg) scale(1.1);
+}
+
+/* Form Elemanları */
+.dragon-theme input,
+.dragon-theme select,
+.dragon-theme textarea {
+    padding: 12px;
+    border: 2px solid var(--dragon-border);
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: var(--dragon-transition);
+    background: var(--dragon-bg-primary);
+}
+
+.dragon-theme input:focus,
+.dragon-theme select:focus,
+.dragon-theme textarea:focus {
+    outline: none;
+    border-color: var(--dragon-red);
+    box-shadow: 0 0 0 3px rgba(198, 40, 40, 0.1);
+}
+
+.dragon-theme label {
+    color: var(--dragon-text-dark);
+    font-weight: 500;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* Tablolar */
+.dragon-theme table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--dragon-bg-primary);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--dragon-shadow-sm);
+}
+
+.dragon-theme th {
+    background: var(--dragon-red);
+    color: var(--dragon-gold);
+    padding: 15px;
+    font-weight: 600;
+}
+
+.dragon-theme td {
+    padding: 12px 15px;
+    border-bottom: 1px solid var(--dragon-border);
+}
+
+.dragon-theme tr:hover {
+    background: var(--dragon-bg-tertiary);
+}
+
+/* Bildirimler */
+.dragon-theme .alert {
+    padding: 15px 20px;
+    border-radius: 10px;
+    margin: 15px 0;
+    border-left: 4px solid;
+    position: relative;
+    overflow: hidden;
+}
+
+.dragon-theme .alert::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.2), transparent);
+    pointer-events: none;
+}
+
+.dragon-theme .alert-success {
+    background: #d4edda;
+    color: #155724;
+    border-left-color: #28a745;
+}
+
+.dragon-theme .alert-warning {
+    background: #fff3cd;
+    color: #856404;
+    border-left-color: #ffc107;
+}
+
+.dragon-theme .alert-danger {
+    background: #f8d7da;
+    color: #721c24;
+    border-left-color: var(--dragon-red);
+}
+
+.dragon-theme .alert-info {
+    background: #d1ecf1;
+    color: #0c5460;
+    border-left-color: #17a2b8;
+}
+
+/* Navigasyon */
+.dragon-theme .navbar {
+    background: linear-gradient(135deg, var(--dragon-red-dark), var(--dragon-black));
+    padding: 15px 30px;
+    box-shadow: var(--dragon-shadow-lg);
+}
+
+.dragon-theme .navbar-brand {
+    color: var(--dragon-gold) !important;
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: var(--dragon-font-heading);
+}
+
+.dragon-theme .navbar-nav .nav-link {
+    color: var(--dragon-gold-light) !important;
+    margin: 0 10px;
+    padding: 8px 15px !important;
+    border-radius: 30px;
+    transition: var(--dragon-transition);
+}
+
+.dragon-theme .navbar-nav .nav-link:hover,
+.dragon-theme .navbar-nav .nav-link.active {
+    background: var(--dragon-red);
+    color: var(--dragon-gold) !important;
+    transform: translateY(-2px);
+}
+
+/* Footer */
+.dragon-theme footer {
+    background: var(--dragon-black);
+    color: var(--dragon-gold);
+    padding: 40px 0 20px;
+    margin-top: 50px;
+    position: relative;
+    overflow: hidden;
+}
+
+.dragon-theme footer::before {
+    content: '🐉🐉🐉';
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 24px;
+    opacity: 0.1;
+    letter-spacing: 10px;
+}
+
+/* Özel Ejderha Efektleri */
+.dragon-theme .dragon-border {
+    border: 2px solid;
+    border-image: linear-gradient(45deg, var(--dragon-red), var(--dragon-gold), var(--dragon-red)) 1;
+    animation: borderFlow 3s linear infinite;
+}
+
+@keyframes borderFlow {
+    0% { border-image-source: linear-gradient(45deg, var(--dragon-red), var(--dragon-gold), var(--dragon-red)); }
+    50% { border-image-source: linear-gradient(45deg, var(--dragon-gold), var(--dragon-red), var(--dragon-gold)); }
+    100% { border-image-source: linear-gradient(45deg, var(--dragon-red), var(--dragon-gold), var(--dragon-red)); }
+}
+
+.dragon-theme .dragon-glow {
+    animation: dragonGlow 2s ease-in-out infinite;
+}
+
+@keyframes dragonGlow {
+    0%, 100% { box-shadow: 0 0 5px var(--dragon-red); }
+    50% { box-shadow: 0 0 20px var(--dragon-gold), 0 0 30px var(--dragon-red); }
+}
+
+.dragon-theme .dragon-scale {
+    background: linear-gradient(45deg, 
+        var(--dragon-red) 0%, 
+        var(--dragon-red-dark) 25%, 
+        var(--dragon-red) 50%, 
+        var(--dragon-red-dark) 75%, 
+        var(--dragon-red) 100%
+    );
+    background-size: 200% 200%;
+    animation: scaleMove 3s linear infinite;
+}
+
+@keyframes scaleMove {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 200% 200%; }
+}
+
+/* Festival Özel Stilleri */
+.dragon-theme .festival-badge {
+    background: var(--dragon-red);
+    color: var(--dragon-gold);
+    padding: 8px 16px;
+    border-radius: 50px;
+    display: inline-block;
+    font-weight: 600;
+    position: relative;
+    overflow: hidden;
+}
+
+.dragon-theme .festival-badge::after {
+    content: '✨';
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    font-size: 20px;
+    opacity: 0.5;
+    animation: sparkle 1.5s linear infinite;
+}
+
+@keyframes sparkle {
+    0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.5; }
+    50% { transform: scale(1.5) rotate(180deg); opacity: 1; }
+}
+
+.dragon-theme .countdown-timer {
+    background: linear-gradient(135deg, var(--dragon-black), var(--dragon-red-dark));
+    color: var(--dragon-gold);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.dragon-theme .countdown-timer::before {
+    content: '⏰';
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    opacity: 0.3;
+    animation: clockMove 2s linear infinite;
+}
+
+@keyframes clockMove {
+    0% { transform: translateY(-50%) rotate(0deg); }
+    100% { transform: translateY(-50%) rotate(360deg); }
+}
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+    .dragon-theme .navbar {
+        padding: 10px 15px;
+    }
+    
+    .dragon-theme .navbar-brand {
+        font-size: 1.2rem;
+    }
+    
+    .dragon-theme .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+    
+    .dragon-theme .card {
+        padding: 15px;
+    }
+    
+    .dragon-theme h1 {
+        font-size: 2rem;
+    }
+    
+    .dragon-theme h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Yazdırma Stilleri */
+@media print {
+    .dragon-theme {
+        background: white;
+    }
+    
+    .dragon-theme .navbar,
+    .dragon-theme footer,
+    .dragon-theme .btn {
+        display: none;
+    }
+}

@@ -1,0 +1,958 @@
+/**
+ * AI Community Engine - Yeşim Teması
+ * 
+ * Yeşim taşı motifli, zarif ve lüks tema
+ * Zenginlik, saflık ve ölümsüzlük sembolü
+ * 
+ * @package AI_Community_Engine
+ * @subpackage Assets_CSS_Themes
+ */
+
+:root {
+    /* Ana Renkler - Yeşim Paleti */
+    --jade-deep: #0b4f3a;
+    --jade: #1a7f5c;
+    --jade-light: #2e8b6c;
+    --jade-soft: #5f9f8f;
+    --jade-mist: #8fc1b0;
+    --jade-pale: #b8d9d0;
+    --jade-white: #e8f0e7;
+    --jade-ivory: #f8f3e9;
+    
+    /* Vurgu Renkleri - Yeşim Tonları */
+    --jade-emerald: #046b4f;
+    --jade- nephrite: #1e5b4c;
+    --jade-jadeite: #00755e;
+    --jade-serpentine: #9cb071;
+    --jade-gold: #c6a15b;
+    --jade-gold-light: #e5c687;
+    --jade-pearl: #f5e5d5;
+    
+    /* Arka Planlar */
+    --jade-bg-primary: #f5f7f2;
+    --jade-bg-secondary: #e8f0e7;
+    --jade-bg-tertiary: #d8e5da;
+    --jade-bg-dark: #0b4f3a;
+    --jade-bg-luxury: #1a2f2a;
+    
+    /* Metin Renkleri */
+    --jade-text-primary: #1a2f2a;
+    --jade-text-secondary: #2d5a4b;
+    --jade-text-muted: #5f9f8f;
+    --jade-text-light: #f5f7f2;
+    --jade-text-gold: #c6a15b;
+    
+    /* Kenarlıklar */
+    --jade-border: #b8d9d0;
+    --jade-border-dark: #2e8b6c;
+    --jade-border-light: #d8e5da;
+    --jade-border-gold: #e5c687;
+    
+    /* Gölgeler - Işıltılı */
+    --jade-shadow-sm: 0 2px 4px rgba(11, 79, 58, 0.1);
+    --jade-shadow-md: 0 4px 8px rgba(11, 79, 58, 0.15);
+    --jade-shadow-lg: 0 8px 16px rgba(11, 79, 58, 0.2);
+    --jade-shadow-xl: 0 12px 24px rgba(11, 79, 58, 0.25);
+    --jade-glow: 0 0 20px rgba(46, 139, 108, 0.3);
+    
+    /* Geçişler - Zarif */
+    --jade-transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    /* Yazı Tipleri - Zarif */
+    --jade-font-heading: 'Cormorant Garamond', 'Times New Roman', serif;
+    --jade-font-body: 'Lato', 'Arial', sans-serif;
+    --jade-font-elegant: 'Playfair Display', 'Georgia', serif;
+}
+
+/* Genel Stiller */
+body.jade-theme {
+    background: linear-gradient(135deg, 
+        var(--jade-bg-primary) 0%,
+        var(--jade-bg-secondary) 50%,
+        var(--jade-bg-primary) 100%
+    );
+    color: var(--jade-text-primary);
+    font-family: var(--jade-font-body);
+    line-height: 1.8;
+    position: relative;
+    min-height: 100vh;
+}
+
+body.jade-theme::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 10% 20%, var(--jade-pale) 0%, transparent 20%),
+        radial-gradient(circle at 90% 80%, var(--jade-soft) 0%, transparent 25%),
+        radial-gradient(circle at 30% 60%, var(--jade-mist) 0%, transparent 30%);
+    opacity: 0.1;
+    pointer-events: none;
+    z-index: -1;
+    animation: jadeGlow 8s ease-in-out infinite;
+}
+
+@keyframes jadeGlow {
+    0%, 100% { opacity: 0.1; }
+    50% { opacity: 0.15; }
+}
+
+/* Başlıklar - Yeşim Oymaları */
+.jade-theme h1, 
+.jade-theme h2, 
+.jade-theme h3, 
+.jade-theme h4, 
+.jade-theme h5, 
+.jade-theme h6 {
+    font-family: var(--jade-font-heading);
+    color: var(--jade-text-primary);
+    font-weight: 400;
+    letter-spacing: 1px;
+    position: relative;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.jade-theme h1 {
+    font-size: 4rem;
+    line-height: 1.1;
+    margin-bottom: 30px;
+    background: linear-gradient(135deg, 
+        var(--jade-deep) 0%,
+        var(--jade) 50%,
+        var(--jade-deep) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.jade-theme h1::before,
+.jade-theme h1::after {
+    content: '⚬';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: var(--jade-gold);
+    opacity: 0.3;
+    transition: var(--jade-transition);
+}
+
+.jade-theme h1::before {
+    left: -30px;
+}
+
+.jade-theme h1::after {
+    right: -30px;
+}
+
+.jade-theme h1:hover::before,
+.jade-theme h1:hover::after {
+    opacity: 1;
+    transform: translateY(-50%) scale(1.2);
+}
+
+.jade-theme h2 {
+    font-size: 3rem;
+    border-left: 4px solid var(--jade);
+    padding-left: 20px;
+    transition: var(--jade-transition);
+}
+
+.jade-theme h2:hover {
+    border-left-color: var(--jade-gold);
+    padding-left: 25px;
+}
+
+.jade-theme h3 {
+    font-size: 2.2rem;
+    position: relative;
+    display: inline-block;
+}
+
+.jade-theme h3::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 70%;
+    height: 2px;
+    background: linear-gradient(90deg, 
+        var(--jade),
+        var(--jade-gold)
+    );
+    border-radius: 2px;
+    transition: var(--jade-transition);
+}
+
+.jade-theme h3:hover::after {
+    width: 100%;
+}
+
+/* Linkler - Yeşim Kolye */
+.jade-theme a {
+    color: var(--jade);
+    text-decoration: none;
+    transition: var(--jade-transition);
+    position: relative;
+    padding: 0 2px;
+    font-weight: 500;
+}
+
+.jade-theme a::before {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, 
+        transparent,
+        var(--jade-gold),
+        var(--jade),
+        var(--jade-gold),
+        transparent
+    );
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s;
+}
+
+.jade-theme a::after {
+    content: '⚬';
+    position: absolute;
+    top: 50%;
+    right: -15px;
+    transform: translateY(-50%);
+    font-size: 10px;
+    opacity: 0;
+    transition: var(--jade-transition);
+    color: var(--jade-gold);
+}
+
+.jade-theme a:hover {
+    color: var(--jade-deep);
+    text-shadow: 0 2px 4px rgba(11, 79, 58, 0.1);
+}
+
+.jade-theme a:hover::before {
+    transform: scaleX(1);
+}
+
+.jade-theme a:hover::after {
+    opacity: 1;
+    right: -20px;
+}
+
+/* Butonlar - Yeşim Düğme */
+.jade-theme .btn {
+    padding: 15px 40px;
+    border: none;
+    background: linear-gradient(135deg, 
+        var(--jade),
+        var(--jade-deep)
+    );
+    color: var(--jade-white);
+    font-size: 1.1rem;
+    font-family: var(--jade-font-elegant);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    cursor: pointer;
+    transition: var(--jade-transition);
+    position: relative;
+    overflow: hidden;
+    border-radius: 30px;
+    box-shadow: var(--jade-shadow-md);
+    border: 1px solid var(--jade-gold);
+}
+
+.jade-theme .btn::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, 
+        var(--jade-gold),
+        var(--jade-white),
+        var(--jade-gold)
+    );
+    border-radius: 32px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s;
+    animation: borderShine 2s linear infinite;
+}
+
+@keyframes borderShine {
+    0% { filter: hue-rotate(0deg); }
+    100% { filter: hue-rotate(360deg); }
+}
+
+.jade-theme .btn:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: var(--jade-shadow-lg), var(--jade-glow);
+    color: var(--jade-white);
+}
+
+.jade-theme .btn:hover::before {
+    opacity: 1;
+}
+
+.jade-theme .btn:active {
+    transform: translateY(0);
+    box-shadow: var(--jade-shadow-sm);
+}
+
+.jade-theme .btn-secondary {
+    background: transparent;
+    color: var(--jade);
+    border: 2px solid var(--jade);
+}
+
+.jade-theme .btn-secondary:hover {
+    background: linear-gradient(135deg, 
+        rgba(26, 127, 92, 0.1),
+        rgba(11, 79, 58, 0.1)
+    );
+    color: var(--jade-deep);
+    border-color: var(--jade-gold);
+}
+
+/* Kartlar - Yeşim Tablet */
+.jade-theme .card {
+    background: linear-gradient(135deg, 
+        var(--jade-white) 0%,
+        var(--jade-ivory) 100%
+    );
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: var(--jade-shadow-lg);
+    border: 1px solid var(--jade-border);
+    transition: var(--jade-transition);
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(5px);
+}
+
+.jade-theme .card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, 
+        var(--jade-gold),
+        var(--jade),
+        var(--jade-mist),
+        var(--jade),
+        var(--jade-gold)
+    );
+    opacity: 0.5;
+}
+
+.jade-theme .card::after {
+    content: '⚬⚬⚬';
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    font-size: 30px;
+    color: var(--jade-gold);
+    opacity: 0.1;
+    letter-spacing: 5px;
+    transition: var(--jade-transition);
+}
+
+.jade-theme .card:hover {
+    transform: translateY(-10px) scale(1.01);
+    box-shadow: var(--jade-shadow-xl), var(--jade-glow);
+    border-color: var(--jade-gold);
+}
+
+.jade-theme .card:hover::after {
+    opacity: 0.2;
+    transform: scale(1.1);
+    letter-spacing: 10px;
+}
+
+.jade-theme .card-title {
+    color: var(--jade-text-primary);
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-family: var(--jade-font-heading);
+    position: relative;
+    display: inline-block;
+}
+
+.jade-theme .card-title::before,
+.jade-theme .card-title::after {
+    content: '⚬';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--jade-gold);
+    opacity: 0.5;
+    font-size: 1.2rem;
+}
+
+.jade-theme .card-title::before {
+    left: -20px;
+}
+
+.jade-theme .card-title::after {
+    right: -20px;
+}
+
+/* Form Elemanları - Yeşim Oyması */
+.jade-theme input,
+.jade-theme select,
+.jade-theme textarea {
+    padding: 15px 20px;
+    border: 2px solid var(--jade-border);
+    background: var(--jade-white);
+    font-size: 1rem;
+    font-family: var(--jade-font-body);
+    transition: var(--jade-transition);
+    width: 100%;
+    border-radius: 10px;
+    color: var(--jade-text-primary);
+}
+
+.jade-theme input:focus,
+.jade-theme select:focus,
+.jade-theme textarea:focus {
+    outline: none;
+    border-color: var(--jade);
+    box-shadow: 0 0 0 4px rgba(26, 127, 92, 0.1);
+    background: white;
+}
+
+.jade-theme input:hover,
+.jade-theme select:hover,
+.jade-theme textarea:hover {
+    border-color: var(--jade-soft);
+}
+
+.jade-theme label {
+    color: var(--jade-text-secondary);
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+    display: block;
+    font-family: var(--jade-font-elegant);
+}
+
+.jade-theme label::before {
+    content: '⚬';
+    margin-right: 5px;
+    color: var(--jade-gold);
+    opacity: 0.7;
+}
+
+/* Tablolar - Yeşim Mozaik */
+.jade-theme table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 8px;
+    background: transparent;
+}
+
+.jade-theme th {
+    background: linear-gradient(135deg, 
+        var(--jade-deep),
+        var(--jade)
+    );
+    color: var(--jade-white);
+    padding: 18px 20px;
+    font-weight: 500;
+    font-family: var(--jade-font-heading);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 0.95rem;
+    position: relative;
+}
+
+.jade-theme th:first-child {
+    border-radius: 15px 0 0 15px;
+}
+
+.jade-theme th:last-child {
+    border-radius: 0 15px 15px 0;
+}
+
+.jade-theme td {
+    padding: 15px 20px;
+    background: var(--jade-white);
+    border: none;
+    color: var(--jade-text-secondary);
+    box-shadow: var(--jade-shadow-sm);
+    border-radius: 10px;
+}
+
+.jade-theme tr:hover td {
+    background: linear-gradient(135deg, 
+        var(--jade-white),
+        var(--jade-ivory)
+    );
+    transform: scale(1.01);
+    box-shadow: var(--jade-shadow-md);
+}
+
+/* Bildirimler - Yeşim Kutusu */
+.jade-theme .alert {
+    padding: 20px 30px;
+    margin: 20px 0;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    border: 1px solid;
+    font-family: var(--jade-font-elegant);
+    box-shadow: var(--jade-shadow-sm);
+}
+
+.jade-theme .alert::before {
+    content: '⚬';
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    opacity: 0.2;
+    animation: jadePulse 2s ease-in-out infinite;
+}
+
+@keyframes jadePulse {
+    0%, 100% { transform: translateY(-50%) scale(1); opacity: 0.2; }
+    50% { transform: translateY(-50%) scale(1.2); opacity: 0.3; }
+}
+
+.jade-theme .alert::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, 
+        rgba(255, 255, 255, 0.3) 0%,
+        transparent 70%
+    );
+    opacity: 0.1;
+}
+
+.jade-theme .alert-success {
+    background: linear-gradient(135deg, 
+        rgba(26, 127, 92, 0.1),
+        rgba(11, 79, 58, 0.1)
+    );
+    border-color: var(--jade);
+    color: var(--jade-deep);
+}
+
+.jade-theme .alert-warning {
+    background: linear-gradient(135deg, 
+        rgba(198, 161, 91, 0.1),
+        rgba(229, 198, 135, 0.1)
+    );
+    border-color: var(--jade-gold);
+    color: var(--jade-gold-dark);
+}
+
+.jade-theme .alert-danger {
+    background: linear-gradient(135deg, 
+        rgba(190, 70, 70, 0.1),
+        rgba(160, 50, 50, 0.1)
+    );
+    border-color: #b22222;
+    color: #8b1a1a;
+}
+
+.jade-theme .alert-info {
+    background: linear-gradient(135deg, 
+        rgba(143, 188, 169, 0.1),
+        rgba(95, 159, 143, 0.1)
+    );
+    border-color: var(--jade-mist);
+    color: var(--jade-text-secondary);
+}
+
+/* Navigasyon - Yeşim Bilezik */
+.jade-theme .navbar {
+    background: linear-gradient(135deg, 
+        var(--jade-bg-luxury),
+        var(--jade-deep)
+    );
+    padding: 20px 40px;
+    position: relative;
+    border-bottom: 3px solid var(--jade-gold);
+    box-shadow: var(--jade-shadow-lg);
+}
+
+.jade-theme .navbar::before {
+    content: '⚬⚬⚬⚬⚬';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 16px;
+    color: var(--jade-gold);
+    opacity: 0.3;
+    letter-spacing: 20px;
+    animation: jadeSlide 20s linear infinite;
+}
+
+@keyframes jadeSlide {
+    from { background-position: 0 0; }
+    to { background-position: 100px 0; }
+}
+
+.jade-theme .navbar-brand {
+    color: var(--jade-gold) !important;
+    font-size: 2.2rem;
+    font-weight: 400;
+    font-family: var(--jade-font-heading);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    position: relative;
+    padding: 0 20px;
+}
+
+.jade-theme .navbar-brand::before,
+.jade-theme .navbar-brand::after {
+    content: '⚬';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--jade-white);
+    opacity: 0.5;
+    font-size: 1.5rem;
+}
+
+.jade-theme .navbar-brand::before {
+    left: -10px;
+}
+
+.jade-theme .navbar-brand::after {
+    right: -10px;
+}
+
+.jade-theme .navbar-nav .nav-link {
+    color: var(--jade-white) !important;
+    margin: 0 15px;
+    padding: 10px 20px !important;
+    border-radius: 30px;
+    position: relative;
+    transition: var(--jade-transition);
+    font-family: var(--jade-font-elegant);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.jade-theme .navbar-nav .nav-link::before {
+    content: '⚬';
+    position: absolute;
+    left: -5px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--jade-gold);
+    opacity: 0;
+    transition: var(--jade-transition);
+}
+
+.jade-theme .navbar-nav .nav-link::after {
+    content: '⚬';
+    position: absolute;
+    right: -5px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--jade-gold);
+    opacity: 0;
+    transition: var(--jade-transition);
+}
+
+.jade-theme .navbar-nav .nav-link:hover,
+.jade-theme .navbar-nav .nav-link.active {
+    background: rgba(198, 161, 91, 0.2);
+    color: var(--jade-gold) !important;
+}
+
+.jade-theme .navbar-nav .nav-link:hover::before,
+.jade-theme .navbar-nav .nav-link.active::before,
+.jade-theme .navbar-nav .nav-link:hover::after,
+.jade-theme .navbar-nav .nav-link.active::after {
+    opacity: 1;
+}
+
+/* Footer - Yeşim Mührü */
+.jade-theme footer {
+    background: linear-gradient(135deg, 
+        var(--jade-bg-luxury),
+        var(--jade-deep)
+    );
+    color: var(--jade-white);
+    padding: 70px 0 30px;
+    margin-top: 100px;
+    position: relative;
+}
+
+.jade-theme footer::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 0;
+    right: 0;
+    height: 20px;
+    background: repeating-linear-gradient(
+        90deg,
+        var(--jade-gold),
+        var(--jade-gold) 10px,
+        transparent 10px,
+        transparent 20px
+    );
+    opacity: 0.3;
+}
+
+.jade-theme footer::after {
+    content: '⚬⚬⚬⚬⚬⚬⚬⚬⚬⚬';
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 20px;
+    color: var(--jade-gold);
+    opacity: 0.1;
+    letter-spacing: 15px;
+}
+
+/* Özel Yeşim Efektleri */
+.jade-theme .jade-glow {
+    animation: jadeGlowPulse 3s ease-in-out infinite;
+}
+
+@keyframes jadeGlowPulse {
+    0%, 100% { box-shadow: 0 0 20px var(--jade); }
+    50% { box-shadow: 0 0 40px var(--jade-gold), 0 0 60px var(--jade); }
+}
+
+.jade-theme .jade-shine {
+    position: relative;
+    overflow: hidden;
+}
+
+.jade-theme .jade-shine::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        45deg,
+        transparent 30%,
+        rgba(255, 255, 255, 0.2) 50%,
+        transparent 70%
+    );
+    animation: shine 3s infinite;
+}
+
+@keyframes shine {
+    from { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+    to { transform: translateX(100%) translateY(100%) rotate(45deg); }
+}
+
+.jade-theme .jade-border {
+    border: 2px solid;
+    border-image: repeating-linear-gradient(
+        45deg,
+        var(--jade),
+        var(--jade) 10px,
+        var(--jade-gold) 10px,
+        var(--jade-gold) 20px
+    ) 1;
+    animation: borderFlow 4s linear infinite;
+}
+
+/* Yeşim Ayırıcılar */
+.jade-theme .jade-divider {
+    height: 2px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        var(--jade-gold),
+        var(--jade),
+        var(--jade-gold),
+        transparent
+    );
+    margin: 40px 0;
+    position: relative;
+}
+
+.jade-theme .jade-divider::before,
+.jade-theme .jade-divider::after {
+    content: '⚬';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--jade-gold);
+    font-size: 20px;
+    background: var(--jade-bg-primary);
+    padding: 0 10px;
+}
+
+.jade-theme .jade-divider::before {
+    left: 30%;
+}
+
+.jade-theme .jade-divider::after {
+    right: 30%;
+}
+
+/* Yeşim Süslemeler */
+.jade-theme .jade-ornament {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid var(--jade-border);
+    border-radius: 50px;
+    color: var(--jade);
+    font-family: var(--jade-font-elegant);
+    position: relative;
+}
+
+.jade-theme .jade-ornament::before,
+.jade-theme .jade-ornament::after {
+    content: '⚬';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--jade-gold);
+    font-size: 12px;
+}
+
+.jade-theme .jade-ornament::before {
+    left: -15px;
+}
+
+.jade-theme .jade-ornament::after {
+    right: -15px;
+}
+
+/* Responsive Tasarım */
+@media (max-width: 1024px) {
+    .jade-theme h1 {
+        font-size: 3.5rem;
+    }
+    
+    .jade-theme h2 {
+        font-size: 2.5rem;
+    }
+    
+    .jade-theme h3 {
+        font-size: 2rem;
+    }
+    
+    .jade-theme .card {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .jade-theme .navbar {
+        padding: 15px 20px;
+    }
+    
+    .jade-theme .navbar-brand {
+        font-size: 1.8rem;
+    }
+    
+    .jade-theme .btn {
+        padding: 12px 30px;
+        font-size: 1rem;
+    }
+    
+    .jade-theme h1 {
+        font-size: 2.5rem;
+    }
+    
+    .jade-theme h1::before,
+    .jade-theme h1::after {
+        display: none;
+    }
+    
+    .jade-theme h2 {
+        font-size: 2rem;
+    }
+    
+    .jade-theme h3 {
+        font-size: 1.5rem;
+    }
+    
+    .jade-theme .card::after {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .jade-theme h1 {
+        font-size: 2rem;
+    }
+    
+    .jade-theme h2 {
+        font-size: 1.5rem;
+    }
+    
+    .jade-theme h3 {
+        font-size: 1.2rem;
+    }
+    
+    .jade-theme .navbar-brand::before,
+    .jade-theme .navbar-brand::after {
+        display: none;
+    }
+    
+    .jade-theme .card-title::before,
+    .jade-theme .card-title::after {
+        display: none;
+    }
+}
+
+/* Işık Modu Değişimi */
+.jade-theme.light-mode {
+    --jade-bg-luxury: #e8f0e7;
+    --jade-deep: #0b4f3a;
+    --jade-white: #ffffff;
+}
+
+.jade-theme.dark-mode {
+    --jade-bg-luxury: #0b2f2a;
+    --jade-deep: #1a7f5c;
+    --jade-white: #f0f0f0;
+}
+
+/* Yazdırma Stilleri */
+@media print {
+    .jade-theme {
+        background: white;
+        filter: grayscale(1);
+    }
+    
+    .jade-theme h1 {
+        -webkit-text-fill-color: black;
+        background: none;
+    }
+    
+    .jade-theme .navbar,
+    .jade-theme footer,
+    .jade-theme .btn {
+        display: none;
+    }
+}
